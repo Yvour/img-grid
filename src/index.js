@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import ImageGrid from "./ImageGrid";
+import { App } from "./App";
 
 document.addEventListener("DOMContentLoaded", function() {
   ReactDOM.render(
-    React.createElement(ImageGrid),
-    document.getElementById("image-grid-system")
+    React.createElement(App),
+    document.getElementById("image-grid-application")
   );
 });
