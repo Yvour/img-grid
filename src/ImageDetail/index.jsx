@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import * as Spinners from "css-spinners-react";
 
-import { useStyles } from "./useStyle";
+import { useStyles } from "./useStyles";
 
 export function ImageDetail(props) {
   const { image, updateImage, removeImage, close } = props;
