@@ -36,9 +36,39 @@ export const IMAGES = [
       "https://images.unsplash.com/photo-1532386236358-a33d8a9434e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=978&q=80"
   },
   {
-    id: 77,
+    id: 7,
     url:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gustav_chocolate.jpg/800px-Gustav_chocolate.jpg",
     name: "Abyssinian cat"
+  },
+  {
+    id: 8,
+    url:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Cat_poster_1.jpg/1280px-Cat_poster_1.jpg",
+    name: "Several cat species"
+  },
+  {
+    id: 9,
+    url:
+      "https://upload.wikimedia.org/wikipedia/commons/3/3b/Gato_enervado_pola_presencia_dun_can.jpg",
+    name: "Angry cat"
+  },
+  {
+    id: 10,
+    url:
+      "https://upload.wikimedia.org/wikipedia/commons/2/27/Black_white_cats.jpg",
+    name: "Two cats together"
+  },
+  {
+    id: 11,
+    url:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Котёнок_у_окна.jpg/1280px-Котёнок_у_окна.jpg",
+    name: "Kitten near window"
+  },
+  {
+    id: 12,
+    url:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Кошка_тайской_породы.jpg/800px-Кошка_тайской_породы.jpg",
+    name: "Cat of Thailand"
   }
 ];
