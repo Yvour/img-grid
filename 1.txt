@@ -1,4 +1,0 @@
-
-> image-grid@1.0.0 test E:\Javascript\img-grid
-> jest
-

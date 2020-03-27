@@ -25,6 +25,8 @@ export const useStyles = createUseStyles({
     justifyContent: "bottom",
     backgroundColor: "rgba(204,204,204, 1)"
   },
+  fullSizeImage: { border: "1px solid white" },
+
   closeButton: {
     display: "flex",
     alignItems: "center",

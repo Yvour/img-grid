@@ -17,10 +17,11 @@ export function ImageGrid(props) {
   return (
     <div className={classes.imageGrid} id="3">
       {quarters.map((columnImages, index) => (
-        <div class={classes.column} key={index}>
+        <div className={classes.column} key={index}>
           {columnImages.map(image => {
             return (
               <div
+                key={image.id}
                 className={classes.imageCard}
                 onClick={() => {
                   setSelectedId(image.id);

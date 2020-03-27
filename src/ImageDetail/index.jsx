@@ -52,7 +52,7 @@ export function ImageDetail(props) {
       ) : null}
 
       {isImageView ? (
-        <img src={image.url} />
+        <img src={image.url} className={classes.fullSizeImage} />
       ) : (
         <div>
           <div
@@ -106,6 +106,7 @@ export function ImageDetail(props) {
                           }}
                         />
                         <button
+                          className={classes.inputConfirmButton}
                           onClick={() => {
                             setChangedName(inputValue);
                             registerNameChange(true);
