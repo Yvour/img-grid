@@ -1,16 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import classNames from "classnames";
+import * as Spinners from "css-spinners-react";
+
 import { useStyles } from "./useStyle";
 
 export function ImageDetail(props) {
   const { image, updateImage, removeImage, close } = props;
+  const url = image.url;
+  const fullUrl = image.fullUrl || url;
+  const [renderUrl, setRenderUrl] = useState(url);
   const [isImageView, setImageView] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
   const [isNameChanged, registerNameChange] = useState(false);
   const [changedName, setChangedName] = useState(image.name);
   const [inputValue, setInputValue] = useState(changedName);
   const [isRemoveConfirmation, setRemoveConfirmation] = useState(false);
+  const [isLoaded, setLoaded] = useState(false);
+  useEffect(() => {
+    const bigImage = new Image();
+    bigImage.src = fullUrl;
+    bigImage.onload = () => {
+      setLoaded(true);
+      setRenderUrl(fullUrl);
+    };
+  }, []);
 
   const classes = useStyles();
 
@@ -52,7 +66,7 @@ export function ImageDetail(props) {
       ) : null}
 
       {isImageView ? (
-        <img src={image.url} className={classes.fullSizeImage} />
+        <img src={renderUrl} className={classes.fullSizeImage} />
       ) : (
         <div>
           <div
@@ -69,9 +83,18 @@ export function ImageDetail(props) {
 
           <div className={classes.formContent}>
             <div className={classes.imageContainer}>
-              <img src={image.url} onClick={() => setImageView(true)} />
+              <img src={renderUrl} onClick={() => setImageView(true)} />
             </div>
             <div className={classes.controlsContainer}>
+              <div className={classes.spinnerContainer}>
+                {" "}
+                {isLoaded ? null : (
+                  <React.Fragment>
+                    <Spinners.ThreeQuarters />
+                    Loaging full image...
+                  </React.Fragment>
+                )}
+              </div>
               <div className={classes.detailsContainer}>
                 <div className={classes.detailItem}>
                   <label>ID:</label>

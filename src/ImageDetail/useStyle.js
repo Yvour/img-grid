@@ -25,6 +25,36 @@ export const useStyles = createUseStyles({
     justifyContent: "bottom",
     backgroundColor: "rgba(204,204,204, 1)"
   },
+  imageContainer: {
+    width: "50vw",
+    maxWidth: "50vw",
+    maxHeight: "70vh",
+    overflowY: "auto",
+    "& img": {
+      minWidth: "100%",
+      maxWidth: "100%",
+      height: "auto",
+      width: "auto",
+      maxHeight: "100%"
+    }
+  },
+  controlsContainer: {
+    maxWidth: "34vw",
+
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between"
+  },
+  "@media screen and (max-width: 600px)": {
+    formContent: {
+      flexWrap: "wrap",
+      flexDirection: "column-reverse",
+      maxHeight: "none"
+    },
+    controlsContainer: {
+      maxWidth: "none"
+    }
+  },
   fullSizeImage: { border: "1px solid white" },
 
   closeButton: {
@@ -43,24 +73,6 @@ export const useStyles = createUseStyles({
     }
   },
 
-  imageContainer: {
-    maxWidth: "50vw",
-    maxHeight: "70vh",
-    overflowY: "auto",
-    "& img": {
-      maxWidth: "100%",
-      height: "auto",
-      width: "auto",
-      maxHeight: "100%"
-    }
-  },
-  controlsContainer: {
-    maxWidth: "34vw",
-
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between"
-  },
   detailsContainer: {
     paddingLeft: 15,
     paddingRight: 15,
@@ -117,7 +129,8 @@ export const useStyles = createUseStyles({
   },
   nameValue: {
     minHeight: 140,
-    maxWidth: "calc(33vw-40px)",
+    maxWidth: "calc(33vw - 40px)",
+    wordWrap: "break-word",
 
     padding: 3,
     borderRadius: 3,
@@ -209,5 +222,9 @@ export const useStyles = createUseStyles({
         color: "white"
       }
     }
+  },
+  spinnerContainer: {
+    minHeight: 40,
+    paddingLeft: 15
   }
 });

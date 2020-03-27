@@ -41,7 +41,7 @@ describe("Image Grid System", () => {
     });
 
     expect(container.textContent).toBe(
-      "Gray and white colored catA cat and a childAngry catCat on bedTwo catsTwo cats togetherSleeping catAbyssinian catKitten near windowSavannah CatSeveral cat speciesCat of Thailand"
+      "Forest catA cat and a childAngry catCat on bedProtection for catTwo cats togetherSleeping catAbyssinian catKitten near windowSavannah CatSeveral cat speciesCat of Thailand"
     );
 
     expect(container.querySelectorAll("img").length).toBe(12);
@@ -53,7 +53,7 @@ describe("Image Grid System", () => {
 
     expect(
       container.innerHTML.includes(
-        '<div class="detailItem"><label>Name:</label><div class="nameValue">Gray and white colored cat<button class="editButton">✎</button></div><'
+        '<div class="detailItem"><label>Name:</label><div class="nameValue">Forest cat<button class="editButton">✎</button></div><'
       )
     ).toBe(true);
 
@@ -94,7 +94,7 @@ describe("Image Grid System", () => {
 
     expect(
       container.innerHTML.includes(
-        '<input type="text" class="input" value="Gray and white colored cat">'
+        '<input type="text" class="input" value="Forest cat">'
       )
     ).toBe(true);
 
@@ -152,7 +152,7 @@ describe("Image Grid System", () => {
     );
 
     expect(container.textContent).toBe(
-      "ConfirmationShould this image be deleted?YesNo✖ID:1Name:White and gray colored cats✎✔ Confirm✖ RemoveGray and white colored catA cat and a childAngry catCat on bedTwo catsTwo cats togetherSleeping catAbyssinian catKitten near windowSavannah CatSeveral cat speciesCat of Thailand"
+      "ConfirmationShould this image be deleted?YesNo✖ Loaging full image...ID:1Name:White and gray colored cats✎✔ Confirm✖ RemoveForest catA cat and a childAngry catCat on bedProtection for catTwo cats togetherSleeping catAbyssinian catKitten near windowSavannah CatSeveral cat speciesCat of Thailand"
     );
     const confirmButtons = container.querySelectorAll(
       'div[class="removeConfirmWindowButtons"] button'
@@ -167,7 +167,7 @@ describe("Image Grid System", () => {
     });
 
     expect(container.textContent).toBe(
-      "Cat on bedTwo catsTwo cats togetherSleeping catAbyssinian catKitten near windowSavannah CatSeveral cat speciesCat of ThailandA cat and a childAngry cat"
+      "Cat on bedProtection for catTwo cats togetherSleeping catAbyssinian catKitten near windowSavannah CatSeveral cat speciesCat of ThailandA cat and a childAngry cat"
     );
   });
 });
