@@ -28,7 +28,7 @@ export const useStyles = createUseStyles({
     }
   },
 
-  /* Responsive layout - makes a two column-layout instead of four columns */
+  /* Responsive layout - makes a three column-layout instead of four columns */
   "@media screen and (max-width: 1000px)": {
     column: {
       flex: "33%",
@@ -44,7 +44,6 @@ export const useStyles = createUseStyles({
     }
   },
 
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   "@media screen and (max-width: 600px)": {
     column: {
       flex: "100%",

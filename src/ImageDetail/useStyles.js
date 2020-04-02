@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+
 export const useStyles = createUseStyles({
   globalWrapper: {
     position: "fixed",
@@ -11,6 +12,9 @@ export const useStyles = createUseStyles({
     width: "100%",
     height: "100%",
     backgroundColor: "rgba(170,190,170, 0.85)"
+  },
+  globalWrapperImageView: {
+    overflow: "scroll"
   },
   formContent: {
     zIndex: 1,
@@ -91,7 +95,7 @@ export const useStyles = createUseStyles({
     // fontWeight: "bold",
     boxShadow: "0 -2px 3px rgba(0,0,0,0.7)"
   },
-  changeddetailItem: {
+  changedDetailItem: {
     fontStyle: "italic",
     borderLeft: "1px solid #800000",
     borderBottom: "1px solid red"
@@ -226,5 +230,11 @@ export const useStyles = createUseStyles({
   spinnerContainer: {
     minHeight: 40,
     paddingLeft: 15
+  },
+
+  closeButtonContainer: {
+    maxHeight: 1,
+    justifyContent: "flex-end",
+    display: "flex"
   }
 });

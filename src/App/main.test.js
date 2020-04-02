@@ -77,7 +77,7 @@ describe("Image Grid System", () => {
       container.querySelectorAll('img[class="fullSizeImage"]').length
     ).toBe(1);
 
-    const globalWrapper = container.querySelector('*[class="globalWrapper"]');
+    const globalWrapper = container.querySelector('*[class~="globalWrapper"]');
 
     act(() => {
       globalWrapper.dispatchEvent(new MouseEvent("click", { bubbles: true }));

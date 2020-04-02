@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { useStyles } from "./useStyles";
 
@@ -15,7 +15,7 @@ export function ImageGrid(props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.imageGrid} id="3">
+    <div className={classes.imageGrid}>
       {quarters.map((columnImages, index) => (
         <div className={classes.column} key={index}>
           {columnImages.map(image => {

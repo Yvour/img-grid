@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import classNames from "classnames";
 import * as Spinners from "css-spinners-react";
@@ -30,9 +30,11 @@ export function ImageDetail(props) {
 
   return (
     <div
-      className={classes.globalWrapper}
+      className={classNames(
+        classes.globalWrapper,
+        isImageView ? classes.globalWrapperImageView : null
+      )}
       onClick={isImageView ? () => setImageView(false) : null}
-      style={isImageView ? { overflow: "scroll" } : null}
     >
       {isRemoveConfirmation ? (
         <div className={classes.removeConfirmWindowWrapper}>
@@ -69,13 +71,7 @@ export function ImageDetail(props) {
         <img src={renderUrl} className={classes.fullSizeImage} />
       ) : (
         <div>
-          <div
-            style={{
-              maxHeight: 1,
-              justifyContent: "flex-end",
-              display: "flex"
-            }}
-          >
+          <div className={classes.closeButtonContainer}>
             <button className={classes.closeButton} onClick={() => close()}>
               <div>✖</div>
             </button>
@@ -104,7 +100,7 @@ export function ImageDetail(props) {
                 <div
                   className={classNames(
                     classes.detailItem,
-                    isNameChanged ? classes.changeddetailItem : ""
+                    isNameChanged ? classes.changedDetailItem : ""
                   )}
                 >
                   <label>Name:</label>
